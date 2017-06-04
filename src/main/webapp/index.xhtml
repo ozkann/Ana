@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3c.org/1999/xhtml"
+xmlns:h="http://java.sun.com/jsf/html"
+xmlns:f="http://java.sun.com/jsf/core"
+xmlns:p="http://primefaces.org/ui"
+xmlns:ui="http://java.sun.com/jsf/facelets">
+
+<h:head>
+
+</h:head>
+<h:body>
+
+
+<h:form>
+	<p:growl id="msgs"/>
+	<center><h1>DB-Reporting App. (MySql)</h1></center>
+	<p:panel>
+		
+		<p:outputLabel for="c_id" value="Category No:"/>
+		<p:inputText  id="c_id" label="category No" required="true" value="#{productBean.category_id}"/>	
+<!-- 		<p:commandButton value="search" action="#{productService.search(productBean.category_id)}" update=":pList, msgs"/> -->
+		
+	</p:panel>
+	
+	
+
+</h:form>
+<!-- <h:form id="pList"> -->
+		
+<!-- 		<p:dataTable var="productBean" value="#{productService.search(productBean.category_id)}" rows="8" paginator="true" > -->
+		
+<!-- 			<p:column headerText="Stock No"> -->
+<!-- 				<h:outputText value="#{productBean.stock_id}"></h:outputText> -->
+<!-- 			</p:column> -->
+			
+			
+<!-- 			<p:column headerText="Category No"> -->
+<!-- 				<h:outputText value="#{productBean.category_id}"></h:outputText> -->
+<!-- 			</p:column> -->
+			
+<!-- 			<p:column headerText="Product Name"> -->
+<!-- 				<h:outputText value="#{productBean.product_name}"></h:outputText> -->
+<!-- 			</p:column> -->
+			
+<!-- 			<p:column headerText="Size"> -->
+<!-- 				<h:outputText value="#{productBean.size}"></h:outputText> -->
+<!-- 			</p:column> -->
+			
+<!-- 			<p:column headerText="Purchase"> -->
+<!-- 				<h:outputText value="#{productBean.purchase}"></h:outputText> -->
+<!-- 			</p:column> -->
+			
+<!-- 			<p:column headerText="Sale"> -->
+<!-- 				<h:outputText value="#{productBean.sale}"></h:outputText> -->
+<!-- 			</p:column> -->
+			
+<!-- 			<p:column headerText="Date"> -->
+<!-- 				<h:outputText value="#{productBean.sDate}"></h:outputText> -->
+<!-- 			</p:column> -->
+		
+		
+		
+		
+<!-- 		</p:dataTable> -->
+		<p:panel id="chart" style="margin-top:15px;"> 
+
+	<h:panelGrid columns="2" columnClasses="right, left" style="height:100%;width:100%">
+    	<p:chart type="bar" model="#{chartBean.animatedModel2}" style="width:100%;height:400px" responsive="true" />
+		<p:chart type="pie" model="#{chartBean.pieModel1}" style="width:100%;height:400px" responsive="true" />
+		
+	</h:panelGrid>
+	
+	
+</p:panel>
+		
+		
+<!-- </h:form> -->
+	
+
+
+</h:body>
+</html>
