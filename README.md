@@ -3,7 +3,8 @@
 ## This is a basic animated graphic analysis example of using
 
 ### Spring
-### Primefaces
+### PrimeFaces
 ### Hibernate
 ### Mysql
+#### theme > PrimeFaces Bluesky
 
